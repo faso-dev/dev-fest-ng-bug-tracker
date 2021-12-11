@@ -1,1 +1,54 @@
-<p>create-app works!</p>
+<div class="container-fluid">
+    <div class="app-crud-header">
+        <a routerLink="/dashboard/apps">
+            <button class="app-btn">
+                <span><i class="fas fa-arrow-left"></i></span>
+            </button>
+        </a>
+    </div>
+    <div class="app-crud-form">
+        <form>
+            <div class="row-3">
+                <div class="form-group">
+                    <label for="name">
+                        Nom
+                    </label>
+                    <input type="text"
+                           class="form-control"
+                           id="name"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="code">Code</label>
+                    <input type="text"
+                           class="form-control"
+                           id="code"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="logo">Logo</label>
+                    <input type="file"
+                           class="form-control"
+                           id="logo"
+                    >
+                </div>
+            </div>
+            <div class="row-1">
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control"
+                              id="description"
+                              rows="3"
+                    ></textarea>
+                </div>
+            </div>
+            <div class="row-1">
+                <div class="app-crud-form-actions">
+                    <button class="app-btn">
+                        <span><i class="fas fa-save"></i></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

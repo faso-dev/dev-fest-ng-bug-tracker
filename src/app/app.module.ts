@@ -12,6 +12,10 @@ import {CreateBugComponent} from './components/dashboard/bug/create-bug/create-b
 import {HeaderComponent} from "./components/dashboard/_partials/header/header.component";
 import {SidebarComponent} from "./components/dashboard/_partials/sidebar/sidebar.component";
 import {FooterComponent} from "./components/dashboard/_partials/footer/footer.component";
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SignInComponent } from './components/dashboard/auth/sign-in/sign-in.component';
+import { SignUpComponent } from './components/dashboard/auth/sign-up/sign-up.component';
+import { SettingComponent } from './components/dashboard/setting/setting.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +28,11 @@ import {FooterComponent} from "./components/dashboard/_partials/footer/footer.co
         CreateBugComponent,
         HeaderComponent,
         SidebarComponent,
-        FooterComponent
+        FooterComponent,
+        DashboardComponent,
+        SignInComponent,
+        SignUpComponent,
+        SettingComponent
     ],
     imports: [
         BrowserModule,
