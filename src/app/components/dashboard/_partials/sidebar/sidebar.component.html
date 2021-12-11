@@ -1,0 +1,56 @@
+<div id="app-sidebar">
+    <div id="sidebar-brand">
+        <a routerLink="/dashboard">
+            <h2>
+            <span>
+            <i class="fas fa-bug"></i>
+            TRACKER
+          </span>
+            </h2>
+        </a>
+    </div>
+    <div id="sidebar-menu">
+        <ul class="menu-items">
+            <li class="menu-item" routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}">
+                <a routerLink="/dashboard">
+                    <span><i class="fas fa-tachometer-alt"></i></span>
+                    <span>Tableau de bord</span>
+                </a>
+            </li>
+            <li class="menu-item" routerLinkActive="active">
+                <a routerLink="/dashboard/apps">
+                    <span><i class="fas fa-th"></i></span>
+                    <span>Applications</span>
+                </a>
+            </li>
+            <li class="menu-item" routerLinkActive="active">
+                <a routerLink="/dashboard/devs">
+                    <span><i class="fas fa-users"></i></span>
+                    <span>Développeurs</span>
+                </a>
+            </li>
+            <li class="menu-item" routerLinkActive="active">
+                <a routerLink="/dashboard/bugs">
+                    <span><i class="fas fa-bug"></i></span>
+                    <span>Bogues</span>
+                </a>
+            </li>
+            <li class="bottom-navbar menu-item">
+                <ul>
+                    <li class="menu-item" routerLinkActive="active">
+                        <a routerLink="/dashboard/settings">
+                            <span><i class="fas fa-cogs"></i></span>
+                            <span>Paramètres</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <button class="app-btn">
+                            <span><i class="fas fa-sign-out-alt"></i></span>
+                        </button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
