@@ -1,0 +1,23 @@
+#app-container {
+  #app-main-content {
+    #app-content {
+      button {
+        &.app-btn {
+          @include neumorphism();
+          @include button-outline-variant($secondary-color);
+          @include color();
+          @include hover();
+          min-width: 70px;
+          height: 60px;
+          span{
+            &:first-child{
+              @include font-size(1.5rem);
+            }
+          }
+          @include margin-left(1rem);
+          @include margin-bottom(.5rem);
+        }
+      }
+    }
+  }
+}

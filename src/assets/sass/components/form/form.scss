@@ -1,0 +1,22 @@
+@import "input/input";
+@import "label/label";
+
+#app-container {
+  #app-main-content {
+    #app-content {
+      .app-crud-form {
+        form {
+          .form-group {
+            @include margin-top(1rem);
+          }
+
+          .app-crud-form-actions {
+            @include flexbox();
+            @include justify-content(end);
+            @include margin-top(2.5rem);
+          }
+        }
+      }
+    }
+  }
+}

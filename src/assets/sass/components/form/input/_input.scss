@@ -1,0 +1,16 @@
+#app-container {
+  #app-main-content {
+    #app-content {
+      input, textarea {
+        @include neumorphism-inset();
+        @include padding(1rem);
+        @include border-radius(.5rem);
+        @include color();
+        border: .5px solid $light-secondary-color;
+        &:focus {
+          border-color: $secondary-color !important;
+        }
+      }
+    }
+  }
+}

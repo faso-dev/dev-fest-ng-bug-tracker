@@ -1,0 +1,109 @@
+#app-container {
+  #app-main-content {
+    header {
+      &#app-header {
+        @include padding(1rem);
+        @include flexbox();
+        @include justify-content(space-between);
+        @include background-color($secondary-color);
+        position: fixed;
+        z-index: 999;
+        left: 345px;
+        top: 0;
+        max-width: calc(100vw - 345px);
+        width: 100%;
+
+        .header-left {
+          @include flexbox();
+          @include align-items(center);
+          @include padding-left(1.5rem);
+          max-width: 500px;
+          width: 100%;
+
+          .header-title {
+            @include color();
+          }
+
+          #menu-trigger {
+            max-width: 64px;
+            width: 100%;
+
+            span {
+              &.line {
+                @include background-color($white-color);
+                @include display(block);
+                @include margin-bottom(0.5rem);
+                max-width: 48px;
+                width: 100%;
+                height: 0.1rem;
+
+                &:last-child {
+                  max-width: 24px;
+                }
+              }
+            }
+          }
+        }
+
+        .header-right {
+          @include margin-right(2rem);
+          @include flexbox();
+          @include justify-content(space-between);
+
+          #notifications {
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            @include padding(2.5rem);
+            @include margin-right(1rem);
+            @include hover-radius();
+            @include active();
+            @include neumorphism();
+            @include border-radius(.5rem);
+
+            max-width: 64px;
+            height: 64px;
+            width: 100%;
+
+            span:first-child {
+              @include font-size(2.5rem);
+              @include color();
+            }
+
+          }
+
+          #user-profile {
+            @include flexbox();
+            @include align-items(center);
+            @include padding(2.5rem);
+            @include margin-left(1rem);
+            @include hover-radius();
+            @include active();
+            @include border-radius(.5rem);
+            height: 64px;
+
+            #info {
+              h5, small {
+                @include color($white-color);
+              }
+            }
+
+            .avatar {
+              @include margin-right(1rem);
+              @include neumorphism-inset();
+              max-width: 64px;
+              width: 100%;
+              height: 64px;
+              border-radius: 248.921px;
+            }
+
+            background: #2C2F33;
+            box-shadow: -6.22302px -6.22302px 18.6691px #3B4451, 6.22302px 6.22302px 18.6691px #000000;
+          }
+        }
+
+      }
+    }
+  }
+
+}

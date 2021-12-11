@@ -1,0 +1,143 @@
+body {
+  background-color: $secondary-color;
+  font-family: $font-family;
+
+  a {
+    text-decoration: none;
+  }
+
+  #app-container {
+    #app-main-content {
+      margin-left: 346px;
+      max-width: calc(100vw - 346px);
+
+      main {
+        &#app-content {
+          @include margin-top(100px);
+          @include padding(2rem 1.5rem);
+          min-height: calc(100vh - 100px);
+
+          .app-cards {
+            @include display(grid);
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+
+            @include make-app-card();
+          }
+
+          .app-table-header-actions {
+            @include flexbox();
+            @include justify-content(end);
+            @include margin-bottom(2.5rem);
+            @include margin-top(1.5rem);
+
+            input {
+              max-width: 345px;
+              width: 100%;
+            }
+
+            button {
+              &.app-btn {
+                @include margin-bottom(0);
+              }
+            }
+          }
+
+          .app-crud-header {
+            @include flexbox();
+            @include justify-content(space-between);
+
+            button {
+              &.app-btn {
+                @include margin-left(0);
+              }
+            }
+          }
+
+          .app-crud-form {
+            @include margin-top(2.5rem);
+            @include color();
+            @include neumorphism();
+            @include padding(1.5rem);
+
+            form {
+              .row-3 {
+                @include display(grid);
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 2rem;
+              }
+            }
+          }
+
+          .app-login-container {
+            @include background-color($secondary-color);
+            @include color();
+            @include margin-right(auto);
+            @include margin-left(auto);
+            max-width: 578px;
+            width: 100%;
+
+            form {
+              .image-container {
+                @include flexbox();
+                @include justify-content(center);
+                text-align: center;
+              }
+
+              .row-1 {
+                @include flexbox();
+                @include justify-content(end);
+
+                button {
+                  &.app-btn {
+                    @include margin-top(2rem);
+                    max-width: 150px;
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      footer {
+        p {
+          @include color();
+          @include font-size(1.5rem);
+          text-align: center;
+
+        }
+      }
+
+      .text-danger {
+        color: $danger-color !important;
+      }
+
+      .text-warning {
+        color: $warning-color !important;
+      }
+    }
+  }
+
+  fieldset {
+    @include padding(1.5rem);
+    border: revert;
+  }
+
+  legend {
+    @include padding(.5rem);
+    text-align: center;
+    width: revert;
+    float: revert;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+
