@@ -1,0 +1,63 @@
+#app-container {
+  #app-main-content {
+    main {
+      &#app-content {
+        .app-table {
+          @include padding(1rem);
+          @include neumorphism();
+
+          .table-wrapper {
+            @include padding-top(1rem);
+            height: 578px;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+
+            scrollbar-width: none;
+
+            table {
+              thead {
+                @include neumorphism();
+                position: sticky;
+                z-index: 99;
+                top: 0;
+
+                tr {
+                  th {
+                    @include padding(1.5rem);
+
+                    &:last-child {
+                      text-align: right;
+                    }
+                  }
+                }
+              }
+
+              tr, td, {
+                @include color();
+              }
+
+              tbody {
+                tr {
+                  td, th {
+                    @include padding(1.5rem);
+                  }
+
+                  td {
+                    .app-table-actions {
+                      @include flexbox();
+                      @include justify-content(end);
+                      @include padding-right(0);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
