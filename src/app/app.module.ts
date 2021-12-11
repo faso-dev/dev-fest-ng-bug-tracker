@@ -17,6 +17,11 @@ import { SignInComponent } from './components/dashboard/auth/sign-in/sign-in.com
 import { SignUpComponent } from './components/dashboard/auth/sign-up/sign-up.component';
 import { SettingComponent } from './components/dashboard/setting/setting.component';
 import {DateFormatPipe} from "./pipes/date-format.pipe";
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
     declarations: [
@@ -38,7 +43,11 @@ import {DateFormatPipe} from "./pipes/date-format.pipe";
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        provideAuth(() => getAuth()),
+        provideFirestore(() => getFirestore()),
+        provideStorage(() => getStorage())
     ],
     providers: [
         DateFormatPipe
