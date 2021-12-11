@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CurrentComponentTitleService} from "../../../../services/CurrentComponentTitleService";
 
 @Component({
   selector: 'app-create-app',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateAppComponent implements OnInit {
 
-  constructor() { }
+  constructor(private currentComponentTitleService: CurrentComponentTitleService) { }
 
   ngOnInit(): void {
+    this.currentComponentTitleService.updateCurrentComponentTitle('Ajouter une nouvelle application')
   }
+
 
 }

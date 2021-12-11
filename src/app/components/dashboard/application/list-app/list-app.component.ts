@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CurrentComponentTitleService} from "../../../../services/CurrentComponentTitleService";
 
 @Component({
   selector: 'app-list-app',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListAppComponent implements OnInit {
 
-  constructor() { }
+  constructor(private currentComponentTitleService: CurrentComponentTitleService) { }
 
   ngOnInit(): void {
+    this.currentComponentTitleService.updateCurrentComponentTitle('Gestion des applications')
   }
 
 }
