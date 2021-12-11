@@ -27,9 +27,9 @@
                     <td>
                         <img width="100" [src]="'/assets/img/sflan.png'" alt="SAFLAN">
                     </td>
-                    <td>11 décembre 2021</td>
+                    <td>{{ createdAt | dateFormat }}</td>
                     <td>
-                        11 décembre 2021
+                        {{ updatedAt | dateFormat }}
                     </td>
                     <td>
                         <div class="app-table-actions">

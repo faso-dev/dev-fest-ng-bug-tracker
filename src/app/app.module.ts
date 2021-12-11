@@ -16,6 +16,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SignInComponent } from './components/dashboard/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './components/dashboard/auth/sign-up/sign-up.component';
 import { SettingComponent } from './components/dashboard/setting/setting.component';
+import {DateFormatPipe} from "./pipes/date-format.pipe";
 
 @NgModule({
     declarations: [
@@ -32,13 +33,16 @@ import { SettingComponent } from './components/dashboard/setting/setting.compone
         DashboardComponent,
         SignInComponent,
         SignUpComponent,
-        SettingComponent
+        SettingComponent,
+        DateFormatPipe
     ],
     imports: [
         BrowserModule,
         AppRoutingModule
     ],
-    providers: [],
+    providers: [
+        DateFormatPipe
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
